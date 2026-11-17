@@ -1,1 +1,22 @@
 
+Turn any invoice layout into the same eight clean JSON fields — and never invent a number that isn't on the page.
+
+THE PROBLEM IT SOLVES
+Every vendor formats invoices differently; finance teams re-key them by hand.
+Downstream systems need identical JSON every time, whatever the layout.
+A wrong total is worse than a blank one — silent errors flow everywhere.
+
+WHAT THE CANDIDATE LEARNS
+Zero-shot vs few-shot prompting
+Role / system prompts, XML-tag structuring
+Chain-of-thought reasoning
+Forcing strictly valid JSON output
+Prompt chaining: extract → verify → format
+Temperature, max_tokens, stop sequences
+Prompt versioning and A/B iteration
+
+MUST BE IMPLEMENTED
+15–20 self-made invoices — layouts varied, some fields left blank
+A self-verify pass that re-checks the model's own extraction
+In-prompt normalisation: dates to ISO, currency cleaned
+Versioned prompt library v1→v5 with accuracy measured per version
